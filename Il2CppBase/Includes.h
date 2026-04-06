@@ -1,0 +1,39 @@
+#pragma once
+#define _CRT_SECURE_NO_WARNINGS
+#include <Windows.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <atomic>
+#include <d3d11.h>
+#include <dxgi.h>
+#include <string_view>
+#include <unordered_map>
+#include <variant>
+#include <filesystem>
+#include <random>
+#include <chrono>
+
+#include "Globals.h"
+#include "InGame.h"
+#include "main/logger/logging.h"
+#include "main/utils/notifications.h"
+
+#include "imgui/imgui.h"
+#include "imgui/imgui_impl_win32.h"
+#include "imgui/imgui_impl_dx11.h"
+#include "imgui/imgui_internal.h"
+#include "detours/include/detours.h"
+#include "nlohmann/json.hpp"
+#include "il2cpp/il2cpp.h"
+#include "main/menu/renderer.h"
+
+#include "main/sdk/sdk.h"
+#include "main/utils/utils.h"
+#include "main/config/config.h"
+
+#include "main/menu/menu.h"
+#include "main/features/settings.h"
+#include "main/features/features.h"
+#include "main/hooking/hooks.h"
+#include "main/hooking/hooking.h"
