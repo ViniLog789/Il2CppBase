@@ -1,3 +1,53 @@
+A base cheat SDK for Unity (Il2Cpp) games written in C++. My first cheat base
+
+##  Features
+
+* **Unity SDK includes:**
+
+  * `MethodInfo`, `MonoBehaviour`, `Cursor`, `String`
+  * `Vector2`, `Vector3`, `Quaternion`
+  * `System`
+  * `Transform`, `Object`, `GameObject`, `Component`
+  * `Camera`, `Screen`, `Application`
+
+* **Utils:**
+
+  * WorldToScreen (W2S)
+  * std::string ↔ Unity String conversion
+
+* **Architecture:**
+
+  * Implemented feature system for scalable cheat development
+
+---
+
+##  Example Feature
+
+The base already includes a simple feature example — **Watermark**:
+
+<details>
+<summary>Watermark code</summary>
+
+```cpp
+namespace Il2CppBase::Features::Visuals
+{
+	class Watermark : public FeatureCore
+	{
+		Watermark();
+		~Watermark() override = default;
+
+		void OnActivate() override {};
+		void OnDeactivate() override {};
+		void OnRender() override;
+		void OnMenuRender() override;
+
+	private:
+		std::string CachedText;
+	};
+}
+```
+
+```cpp
 #include "watermark.h"
 
 using namespace Il2CppBase::Features::Visuals; // Your cheat name
@@ -25,7 +75,7 @@ void Watermark::OnRender()
         CachedText.append(" FPS");
     }
 
-    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[3]);
+    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[4]);
     const ImVec2 textSize = ImGui::CalcTextSize(CachedText.c_str());
     ImGui::PopFont();
 
@@ -75,7 +125,7 @@ void Watermark::OnRender()
             windowPos.y + (windowSize.y - textSize.y) / 2
         );
 
-        ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[3]);
+        ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[4]);
         drawList->AddText(textPos, IM_COL32(255, 255, 255, 255), CachedText.c_str());
         ImGui::PopFont();
     }
@@ -110,3 +160,50 @@ void Watermark::OnMenuRender()
 
 	ImGui::PopStyleVar();
 }
+```
+</details>
+
+This demonstrates how features are structured and rendered.
+
+---
+
+##  Setup
+
+```bash
+git clone https://github.com/ViniLog789/Il2CppBase/
+```
+
+* Open the project in your IDE (Visual Studio 2026 was used during development)
+* Replace placeholders with your data:
+
+  * `// your cheat name` — your cheat name
+  * `// your license` — your license
+  * `// your author` — your nickname
+  * `// your github repository` — your GitHub repository link (if needed)
+* Build the project
+
+---
+
+##  License
+
+This project is licensed under the **Creative Commons Zero v1.0 Universal**.
+
+Author: **ViniLog and VCom Team**
+
+---
+
+##  Contacts
+
+* GitHub: [https://github.com/ViniLog789](https://github.com/ViniLog789)
+* Discord: **vinilog789**
+* Telegram: **Badly_Day**
+
+---
+
+##  Support
+
+If you like this project, consider supporting development:
+
+* Boosty link: [https://boosty.to/vinilog/donate](https://boosty.to/vinilog/donate)
+
+---

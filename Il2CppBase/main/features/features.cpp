@@ -186,7 +186,7 @@ void FeatureHandler::ShowFeaturesByType()
 {
     const char* categoryName = GetFeatureTypeName(CurrentType);
     ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 10);
-    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[7]);
+    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[5]);
     ImGui::TextColored(ImVec4(0.0f, 1.0f, 1.0f, 1.0f), "%s Features", categoryName);
     ImGui::PopFont();
     ImGui::Separator();

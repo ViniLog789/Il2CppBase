@@ -72,6 +72,9 @@
     <ClCompile Include="main\features\feats\watermark\watermark.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="main\features\feats\test\test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Globals.h">
@@ -213,6 +216,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="main\sdk\Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main\features\feats\test\test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -28,7 +28,7 @@ void Menu::NewYear()
     auto& io = ImGui::GetIO();
     ImDrawList* dl = ImGui::GetBackgroundDrawList();
 
-    ImGui::PushFont(io.Fonts->Fonts[6]);
+    ImGui::PushFont(io.Fonts->Fonts[4]);
     ImU32 snowColor = IM_COL32(230, 230, 255, 200);
     for (auto& s : snow) {
         dl->AddText(s, snowColor, "S");
@@ -46,8 +46,7 @@ void Menu::Render()
         ImGuiWindowFlags_NoCollapse |
         ImGuiWindowFlags_NoResize |
         ImGuiWindowFlags_NoScrollbar |
-        ImGuiWindowFlags_NoScrollWithMouse |
-        ImGuiWindowFlags_NoBackground;
+        ImGuiWindowFlags_NoScrollWithMouse;
 
     constexpr int menuWidth = 900;
     constexpr int menuHeight = 650;
@@ -136,7 +135,7 @@ void Menu::Render()
         ImGui::Separator();
 
         ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 2.5 * dpiScale);
-        std::string ver = Version + " | MIT License"; // your license
+        std::string ver = Version + " | CC0 License"; // your license
 
         ImGui::SetCursorPosY(ImGui::GetCursorPosY() + 2.5 * dpiScale);
         ImGui::SetCursorPosX((tabBarWidth * dpiScale - ImGui::CalcTextSize(ver.c_str()).x) * 0.5f);
@@ -192,7 +191,7 @@ void Menu::Render()
             {
                 ImGui::Columns(2, nullptr, false);
                 {
-                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[7]);
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[5]);
                     ImGui::TextColored(ImVec4(0.8f, 0.8f, 1.f, 1.f), "General");
                     ImGui::PopFont();
 
@@ -234,7 +233,7 @@ void Menu::Render()
 
                 ImGui::NextColumn();
                 {
-                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[7]);
+                    ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[5]);
                     ImGui::TextColored(ImVec4(0.8f, 0.8f, 1.f, 1.f), "Colors");
                     ImGui::PopFont();
 
@@ -274,7 +273,7 @@ void Menu::Render()
 
                 ImGui::Columns(1);
 
-                if (ImGui::BeginPopupModal("Set Menu Key", nullptr, ImGuiWindowFlags_AlwaysAutoResize))
+                if (ImGui::BeginPopupModal("Set menu key", nullptr, ImGuiWindowFlags_AlwaysAutoResize))
                 {
                     ImGui::Text("Press key");
                     ImGui::Separator();
@@ -314,7 +313,7 @@ void Menu::Render()
 
             ImGui::BeginChild("OpenSource", ImVec2(0, 150 * dpiScale), true);
             {
-                ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[7]);
+                ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[5]);
                 ImGui::TextColored(accentPurple, "Open Source");
                 ImGui::PopFont();
                 ImGui::Separator();
@@ -344,13 +343,13 @@ void Menu::Render()
                 ImGui::PopStyleColor(2);
 
                 ImGui::Dummy(ImVec2(0, 8));
-                ImGui::TextWrapped("This project is open source and available under MIT License. Feel free to contribute!"); // your license
+                ImGui::TextWrapped("This project is open source and available under CC0 License. Feel free to contribute!"); // your license
             }
             ImGui::EndChild();
 
             ImGui::BeginChild("Credits", ImVec2(0, 0), true);
             {
-                ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[7]);
+                ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[5]);
                 ImGui::TextColored(accentPurple, "Credits");
                 ImGui::PopFont();
                 ImGui::Separator();

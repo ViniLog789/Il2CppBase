@@ -100,49 +100,21 @@ inline void InitFonts()
     io.Fonts->AddFontFromMemoryCompressedTTF(
         DefFont_compressed_data,
         DefFont_compressed_size,
-        40.f,
-        &fontConfig
-    );
-    // 4
-    io.Fonts->AddFontFromMemoryCompressedTTF(
-        DefFont_compressed_data,
-        DefFont_compressed_size,
         25.f,
         &fontConfig
     );
-    // 5
-    io.Fonts->AddFontFromMemoryCompressedTTF(
-        VCustom_compressed_data,
-        VCustom_compressed_size,
-        20.f,
-        &fontConfig
-    );
-    // 6
+    // 4 6
     io.Fonts->AddFontFromMemoryCompressedTTF(
         VCustom_compressed_data,
         VCustom_compressed_size,
         15.f,
         &fontConfig
     );
-    // 7
+    // 5
     io.Fonts->AddFontFromMemoryCompressedTTF(
         DefFont_compressed_data,
         DefFont_compressed_size,
         20.f,
-        &fontConfig
-    );
-    //8
-    io.Fonts->AddFontFromMemoryCompressedTTF(
-        VCustom_compressed_data,
-        VCustom_compressed_size,
-        120.f,
-        &fontConfig
-    );
-    // 9
-    io.Fonts->AddFontFromMemoryCompressedTTF(
-        VCustom_compressed_data,
-        VCustom_compressed_size,
-        50.f,
         &fontConfig
     );
 }

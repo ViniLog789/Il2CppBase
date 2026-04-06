@@ -70,6 +70,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)build</OutDir>
+    <IntDir>$(SolutionDir)build\intermediate</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -151,6 +155,7 @@
     <ClCompile Include="libs\imgui\imgui_tables.cpp" />
     <ClCompile Include="libs\imgui\imgui_widgets.cpp" />
     <ClCompile Include="main\config\config.cpp" />
+    <ClCompile Include="main\features\feats\test\test.cpp" />
     <ClCompile Include="main\features\feats\watermark\watermark.cpp" />
     <ClCompile Include="main\features\features.cpp" />
     <ClCompile Include="main\hooking\hooking.cpp" />
@@ -181,6 +186,7 @@
     <ClInclude Include="libs\nlohmann\json.hpp" />
     <ClInclude Include="libs\nlohmann\json_fwd.hpp" />
     <ClInclude Include="main\config\config.h" />
+    <ClInclude Include="main\features\feats\test\test.h" />
     <ClInclude Include="main\features\feats\watermark\watermark.h" />
     <ClInclude Include="main\features\features.h" />
     <ClInclude Include="main\features\features_includes.h" />
