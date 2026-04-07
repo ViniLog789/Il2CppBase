@@ -1,7 +1,7 @@
 #pragma once
 #include "Includes.h"
 
-namespace Il2CppBase::Notifications
+namespace Il2CppBase::Notifications // Your cheat name
 {
     enum class NotificationType : uint8_t
     {

@@ -4,23 +4,38 @@ namespace fs = std::filesystem;
 
 std::string Utils::GetCheatDirectory()
 {
-	return "C:\\Il2CppBase";
+	return "C:\\VComDev\\Il2CppBase"; // your cheat name and your author
 }
 
 void Utils::CreateCheatDirectory()
 {
-	const std::string cheatDir = GetCheatDirectory();
-	const std::string configDir = cheatDir + "\\configs";
+	try
+	{
+		const std::string baseDir = "C:\\VComDev"; // your author 
+		const std::string cheatDir = baseDir + "\\IMNAHCheatV"; // your cheat name
+		const std::string configDir = cheatDir + "\\configs";
 
-	if (!fs::exists(cheatDir))
-	{
-		LOG_INFO("Cheat directory not found, creating one.");
-		fs::create_directory(cheatDir);
+		if (!fs::exists(baseDir))
+		{
+			LOG_INFO("Creating base directory"); // your author
+			fs::create_directory(baseDir);
+		}
+
+		if (!fs::exists(cheatDir))
+		{
+			LOG_INFO("Creating cheat directory");
+			fs::create_directory(cheatDir);
+		}
+
+		if (!fs::exists(configDir))
+		{
+			LOG_INFO("Creating config directory");
+			fs::create_directory(configDir);
+		}
 	}
-	if (!fs::exists(configDir))
+	catch (const std::filesystem::filesystem_error& e)
 	{
-		LOG_INFO("Config directory not found, creating one.");
-		fs::create_directory(configDir);
+		LOG_ERROR("Filesystem error: %s", e.what());
 	}
 }
 

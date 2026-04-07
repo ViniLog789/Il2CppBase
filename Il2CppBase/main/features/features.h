@@ -1,7 +1,7 @@
 #pragma once
 #include "Includes.h"
 
-namespace Il2CppBase
+namespace Il2CppBase // your cheat name
 {
     enum FeatureType : uint8_t
     {
@@ -123,4 +123,4 @@ namespace Il2CppBase
 }
 
 #define GET_FEATURE_CONFIG_VALUE(Category, FeatureName, ConfigName, Type) \
-    GET_FEATURE_HANDLER()->GetFeature<Il2CppBase::Features::Category::FeatureName>(#FeatureName)->GetConfigManager()->GetConfigValue<Type>(ConfigName)
+    GET_FEATURE_HANDLER()->GetFeature<Il2CppBase::Features::Category::FeatureName>(#FeatureName)->GetConfigManager()->GetConfigValue<Type>(ConfigName) // your cheat name

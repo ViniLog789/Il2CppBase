@@ -4,6 +4,18 @@
 #include "../res/fonts/HeadFont.hpp"
 #include "../res/fonts/VCustomFont.hpp"
 
+// If your menu becomes brighter and looks washed out (like on old GPUs) in some games,
+// just apply ToLinear to your colors (example game: Sons Of The Forest).
+ImVec4 ToLinear(ImVec4 c)
+{
+    return ImVec4(
+        powf(c.x, 2.2f),
+        powf(c.y, 2.2f),
+        powf(c.z, 2.2f),
+        c.w
+    );
+}
+
 inline void SetMenuDefaultStyle()
 {
     ImGuiStyle& style = ImGui::GetStyle();
@@ -103,7 +115,7 @@ inline void InitFonts()
         25.f,
         &fontConfig
     );
-    // 4 6
+    // 4
     io.Fonts->AddFontFromMemoryCompressedTTF(
         VCustom_compressed_data,
         VCustom_compressed_size,

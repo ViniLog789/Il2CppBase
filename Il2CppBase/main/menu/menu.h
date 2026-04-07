@@ -1,7 +1,7 @@
 #pragma once
 #include "Includes.h"
 
-namespace Il2CppBase
+namespace Il2CppBase // your cheat name
 {
 	class Menu
 	{
