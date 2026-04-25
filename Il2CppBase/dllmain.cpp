@@ -1,7 +1,7 @@
 #include "Includes.h"
 #include "memory.h"
 
-using namespace Il2CppBase;
+using namespace Il2CppBase; // your cheat name
 
 static std::unique_ptr<Logger> loggerInstance;
 static std::unique_ptr<Renderer> rendererInstance;

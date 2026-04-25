@@ -12,7 +12,7 @@ void Utils::CreateCheatDirectory()
 	try
 	{
 		const std::string baseDir = "C:\\VComDev"; // your author 
-		const std::string cheatDir = baseDir + "\\IMNAHCheatV"; // your cheat name
+		const std::string cheatDir = baseDir + "\\Il2CppBase"; // your cheat name
 		const std::string configDir = cheatDir + "\\configs";
 
 		if (!fs::exists(baseDir))
