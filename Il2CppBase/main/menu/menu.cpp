@@ -364,7 +364,7 @@ void Menu::Render()
 
                 ImGui::Dummy(ImVec2(0, 8));
                 ImGui::TextColored(ImVec4(0.6f, 0.8f, 1.0f, 1.0f), "Special Thanks");
-                ImGui::TextWrapped("Evelien (feature system)");
+                ImGui::TextWrapped("Evelien (feature system), .gashopeless");
             }
             ImGui::EndChild();
 
